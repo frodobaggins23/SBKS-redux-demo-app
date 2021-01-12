@@ -10,6 +10,7 @@ import {
 } from '../redux/actions/licenceActions';
 
 const getLicenceAmount = ({ licenceReducer }) => {
+    // hook selector fn does not need to return object but any value
     return licenceReducer.amount;
 };
 
