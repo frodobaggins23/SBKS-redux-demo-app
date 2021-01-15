@@ -3,8 +3,7 @@ import { LICENCE_DECREMENT } from '../types';
 export const basicLogger = (store) => (next) => (action) => {
     console.info('dispatching:', action.type);
     let result = next(action);
-    console.info('updated store:', store.getState().licenceReducer);
-    console.log(result);
+    console.info('updated store:', store.getState());
     return result;
 };
 
